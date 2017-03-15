@@ -8,6 +8,7 @@ class Complement
     }
     rna_sequence = ''
     sequence.each_char do |nucleotide|
+      return '' if equivalences[nucleotide].nil? 
       rna_sequence += equivalences[nucleotide]
     end
     rna_sequence
