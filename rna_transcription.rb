@@ -1,5 +1,11 @@
 class Complement
   def self.of_dna(letter)
-    'G' if letter == 'C'
+    equivalences = {
+     'G' => 'C',
+     'C' => 'G',
+     'T' => 'A',
+     'A' => 'U'
+    }  
+    equivalences[letter]
   end
 end
